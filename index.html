@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeshShield</title>
+  <style>
+    body { font-family: sans-serif; background: #121212; color: #fff; text-align: center; padding: 2rem; }
+    .alert { background: #e63946; padding: 1rem; margin-top: 2rem; border-radius: 6px; display: none; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; background: #2a9d8f; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>MeshShield Mobile</h1>
+  <p>This device is protected from mesh relays like Bitchat.</p>
+  <button onclick="activateShield()">Scan BLE Traffic</button>
+  <div class="alert" id="alertBox">Mesh signatures detected! Relay attempt blocked.</div>
+
+  <script>
+    function activateShield() {
+      // Simulation only — mobile browsers can't access raw BLE packets yet
+      document.getElementById('alertBox').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
